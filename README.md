@@ -33,4 +33,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 🚀 Locked 3D Library Versions
+
+This project uses specific versions of the 3D rendering libraries to avoid known issues:
+
+- `three@0.160.1`: Avoids removal of `LuminanceFormat` and introduction of `BatchedMesh`
+- `@react-three/fiber@9.1.2`: Compatible with Three >= 0.156
+- `@react-three/drei@10.0.6`: Requires Three >= 0.159
+
+These versions are locked to ensure a stable development experience. Do not update without testing against `three-stdlib` or other dependent packages.
