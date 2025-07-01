@@ -46,7 +46,7 @@ const About = () => {
       id="information"
       className="relative text-white flex flex-col-reverse lg:flex-row items-stretch justify-center px-8 gap-8 mb-16"
     >
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 hidden dark:block">
         <Image
           src="/images/skull.jpg"
           alt="Background"
@@ -86,7 +86,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full text-[16px] lg:text-[24px] leading-relaxed text-gray-200 space-y-6 tracking-normal">
+        <div className="lg:w-1/2 w-full text-[16px] lg:text-[24px] leading-relaxed text-gray-800 dark:text-gray-100 space-y-6 tracking-normal">
           <motion.p {...paragraphStyles}>
             I'm Ian — a digital designer, front-end developer, and visual
             storyteller with a love for clean design, smart interaction, and

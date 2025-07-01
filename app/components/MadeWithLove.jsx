@@ -5,7 +5,7 @@ const MadeWithLove = () => {
       Made with
       <Image src={"/images/heart.svg"} width={16} height={16} alt="heart" />
       <span className="text-base my-2">+</span>
-      <Image src={"/images/logo4.svg"} width={16} height={16} alt="skull" />
+      <Image src={"/images/skull.svg"} width={16} height={16} alt="skull" />
     </div>
   );
 };

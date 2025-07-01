@@ -21,6 +21,36 @@ const phrases = [
 const Hero = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.add(
+        "transition-colors",
+        "duration-500"
+      );
+      if (storedTheme) {
+        setTheme(storedTheme);
+        document.documentElement.classList.toggle(
+          "dark",
+          storedTheme === "dark"
+        );
+      } else {
+        localStorage.setItem("theme", "dark");
+        document.documentElement.classList.add("dark");
+      }
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.add("transition-colors", "duration-500");
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
+
   // Set up interval to change phrase
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,6 +77,43 @@ const Hero = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       <div className="flex flex-col justify-center items-center min-h-screen text-center py-20 font-spline-sans relative z-10">
+        <button
+          onClick={toggleTheme}
+          aria-label="Toggle Dark Mode"
+          className="absolute top-6 right-6 p-2 rounded-full z-20 transition-colors duration-300 hover:bg-teal-500 bg-gray-200 dark:bg-gray-800 text-yellow-500 dark:text-gray-200"
+        >
+          {theme === "dark" ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 3v1m0 16v1m8.66-8.66h1M3.34 12h1m14.14 5.66l.71.71M5.05 5.05l.71.71m0 12.02l-.71.71m12.02-12.02l-.71.71M12 5a7 7 0 000 14 7 7 0 000-14z"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+              />
+            </svg>
+          )}
+        </button>
         <div id="skull" className="relative w-52 h-52 mb-8">
           <LottieWrapper />
         </div>

@@ -7,10 +7,10 @@ const Footer = () => {
     <footer className="footer p-4 relative max-h-[400px] w-full flex items-center justify-center">
       <div className="flex flex-col items-center justify-center w-full h-auto">
         <MadeWithLove />
-        <p className="text-xs text-gray-400 font-light">
+        <p className="text-xs text-gray-800 dark:text-gray-400 font-light">
           Designing and building beautiful spaces since 1997
         </p>
-        <p className="text-xs text-gray-400 font-light">
+        <p className="text-xs text-gray-800 dark:text-gray-400 font-light">
           Copyright © {new Date().getFullYear()} - All right reserved
         </p>
 
