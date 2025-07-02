@@ -1,5 +1,6 @@
 import { Outfit, Spline_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -20,9 +21,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${splineSans.variable} antialiased`}>
-        {children}
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">{children}</ThemeProvider>
       </body>
     </html>
   );
