@@ -42,7 +42,8 @@ export default function Signals() {
     async function fetchNotionData() {
       const res = await fetch("/api/notion-signals");
       const json = await res.json();
-      setData(json || []);
+      console.log("Notion API response:", json);
+      setData(Array.isArray(json) ? json : []);
       setLoading(false);
     }
     fetchNotionData();
@@ -54,9 +55,8 @@ export default function Signals() {
   return (
     <div>
       <ul className="space-y-1 text-sm text-teal-700 italic tracking-wide">
-        {data.map((item) => (
-          <SignalItem key={item.id} item={item} />
-        ))}
+        {Array.isArray(data) &&
+          data.map((item) => <SignalItem key={item.id} item={item} />)}
       </ul>
     </div>
   );
