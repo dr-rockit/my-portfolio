@@ -22,9 +22,9 @@ export default function Signals() {
       <ul className="space-y-1 text-sm text-teal-700 italic tracking-wide">
         {data.map((item) => (
           <li key={item.id}>
-            <p>
-              <strong className="text-gray-500">Date —</strong>{" "}
-              {item.properties?.Date?.date?.start || "—"}
+            <p className="text-gray-600 tracking-wider">
+              {" "}
+              [{item.properties?.Date?.date?.start || "—"}]
             </p>
             <p>
               <strong className="text-gray-500">Music —</strong>{" "}

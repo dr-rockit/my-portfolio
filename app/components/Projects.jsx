@@ -112,7 +112,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="w-full aspect-square border-t-2 border-t-cyan-900 pt-8"
+              className="w-full aspect-square border-t-1 dark:border-t-cyan-900 pt-8"
             >
               <div className="flex justify-between items-end p-2 mb-8">
                 <div className="left">
@@ -125,7 +125,7 @@ const Projects = () => {
                   </p>
                 </div>
               </div>
-              <div className="card width-full relative aspect-square bg-neutral-800 rounded-xl overflow-hidden">
+              <div className="card width-full relative aspect-square bg-neutral-50 dark:bg-neutral-800 rounded-xl overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
