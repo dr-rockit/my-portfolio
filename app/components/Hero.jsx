@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { animate } from "motion";
-import { ThemeToggle } from "../theme-toggle";
 
 const LottieWrapper = dynamic(() => import("./LottieWrapper"), { ssr: false });
 

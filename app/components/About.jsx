@@ -2,6 +2,7 @@
 import React, { useMemo } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Signals from "./Signals";
 
 const About = () => {
   const paragraphStyles = {
@@ -168,20 +169,7 @@ const About = () => {
             <h3 className="text-sm uppercase tracking-widest text-gray-500 mb-4">
               Signals & Noise
             </h3>
-            <ul className="space-y-1 text-sm text-teal-700 italic tracking-wide">
-              <li>
-                <strong className="text-gray-500">Music —</strong> Mark
-                Pritchard & Thom Yorke - Tall Tales
-              </li>
-              <li>
-                <strong className="text-gray-500">Book —</strong> Made By James
-                - The Honest Guide to Creativity and Logo Design by James Martin
-              </li>
-              <li>
-                <strong className="text-gray-500">TV Show —</strong> Slow Horses
-                (Apple TV+)
-              </li>
-            </ul>
+            <Signals />
           </div>
         </div>
       </div>
