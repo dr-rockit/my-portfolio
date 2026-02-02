@@ -1,17 +1,16 @@
-import { Outfit, Spline_Sans } from "next/font/google";
+import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import WorkButton from "./components/WorkButton";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "900"],
 });
 
-const splineSans = Spline_Sans({
-  variable: "--font-spline-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
 });
 
 export const metadata = {
@@ -19,11 +18,19 @@ export const metadata = {
   description: "Senior Web & Multimedia Designer portfolio specializing in UI/UX and front-end development.",
 };
 
+const workStatus = {
+  text: "Available for work",
+  active: true, // Set to false to turn the dot red
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable} ${splineSans.variable} antialiased`}>
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system">{children}</ThemeProvider>
+      <body className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} antialiased`}>
+        <WorkButton /> {/* Sits on top of everything */}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

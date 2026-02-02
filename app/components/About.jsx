@@ -15,6 +15,7 @@ const About = () => {
   const skills = [
     "Adobe Illustrator",
     "Adobe Photoshop",
+    "Adobe After Effects",
     "Adobe Premiere Pro",
     "Ableton Live",
     "DaVinci Resolve",
@@ -47,16 +48,16 @@ const About = () => {
       id="information"
       className="relative text-white flex flex-col-reverse lg:flex-row items-stretch justify-center px-8 gap-8 mb-16"
     >
-      <div className="absolute inset-0 z-0 hidden dark:block h-full w-full mx-auto overflow-hidden">
+      {/* <div className="absolute inset-0 z-0 hidden dark:block h-full w-full mx-auto overflow-hidden">
         <Image
           src="/images/skull.jpg"
           alt="Background"
           fill
           priority
-          quality={60}
+          quality={50}
           className="object-cover lg:object-contain object-left opacity-20"
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 flex flex-col-reverse lg:flex-row items-stretch justify-center w-full gap-8">
         <div className="flex flex-col justify-end self-stretch w-full lg:w-1/2">
@@ -87,31 +88,51 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full text-[16px] lg:text-[24px] leading-relaxed text-gray-800 dark:text-gray-100 space-y-6 tracking-normal">
-          <motion.p {...paragraphStyles}>
+        <div className="lg:w-1/2 w-full space-y-8">
+          <motion.p
+            {...paragraphStyles}
+            className="text-xl lg:text-3xl font-medium leading-tight text-gray-900 dark:text-white"
+          >
             I'm Ian — a digital designer, front-end developer, and visual
             storyteller with a love for clean design, smart interaction, and
-            immersive motion. For over three decades, I've been crafting digital
-            experiences that connect, inform, and occasionally surprise.
+            immersive motion.
           </motion.p>{" "}
           <motion.p
             {...paragraphStyles}
             transition={{ ...paragraphStyles.transition, delay: 0.2 }}
+            className="space-y-6 text-base lg:text-lg leading-relaxed text-gray-600 dark:text-gray-400"
           >
-            From interactive installations in luxury property marketing suites
-            to brand identities for AI startups, I work across disciplines to
-            bring ideas to life — combining visuals, code, motion, and sound
-            into cohesive, engaging experiences.
+            For over three decades, I've been crafting digital experiences that
+            connect, inform, and surprise. Today, I combine that deep design
+            intuition with the power of AI - using modern tools to prototype
+            faster, optimize code, and push the boundaries of what's possible.
+            It's a hybrid workflow that allows me to deliver high-performance,
+            rich experiences with the craftsmanship of a veteran and the speed
+            of a startup.
           </motion.p>{" "}
           <motion.p
             {...paragraphStyles}
             transition={{ ...paragraphStyles.transition, delay: 0.4 }}
+            className="space-y-6 text-base lg:text-lg leading-relaxed text-gray-600 dark:text-gray-400"
           >
-            I'm lucky to work remotely from the beautiful edges of Eryri
-            National Park (Snowdonia), often swapping my screen for the trails
-            to explore the landscape with my dog Obi. I'm also a longtime music
-            producer and modular synth enthusiast — which often feeds back into
-            my creative process.
+            From interactive installations in luxury property suites to brand
+            identities for new ventures, I work across disciplines to bring
+            ideas to life—blending visuals, code, motion, and sound into
+            cohesive, engaging narratives.
+          </motion.p>{" "}
+          <motion.p
+            {...paragraphStyles}
+            transition={{ ...paragraphStyles.transition, delay: 0.4 }}
+            className="space-y-6 text-base lg:text-lg leading-relaxed text-gray-600 dark:text-gray-400"
+          >
+            Now based back home in{" "}
+            <span className="text-gray-900 dark:text-white font-semibold underline decoration-success decoration-2 underline-offset-4">
+              Cornwall
+            </span>
+            , I balance screen time with coastal trails and the outdoors with my
+            dog, Obi. I'm also a longtime music producer and modular synth
+            enthusiast - a passion for signal flow and soundscapes that often
+            feeds back into my creative process.
           </motion.p>
           {/* Services Section */}
           <motion.div
@@ -121,18 +142,26 @@ const About = () => {
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
             className="pt-8"
           >
-            <h3 className="text-sm uppercase tracking-widest text-gray-500 mb-4">
+            <h3 className="text-sm uppercase tracking-widest text-gray-500 mb-6">
               Services
             </h3>
-            <ul className="flex flex-wrap gap-4 text-teal-400 font-medium text-base lg:text-lg tracking-wide lg:tracking-normal">
+
+            <ul className="flex flex-wrap gap-3">
               {services.map((service, index) => (
                 <motion.li
                   key={service}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
+                  /* Slightly longer delay per item gives it a "cascading" feel */
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-gray-800 px-4 py-2 rounded-md shadow-sm hover:bg-teal-500 hover:text-white transition-colors cursor-default"
+                  /* THE UPGRADED STYLING:
+                     1. bg-teal-500/10: Gives it a permanent subtle weight (not just grey)
+                     2. border-teal-500/20: Adds definition
+                     3. rounded-full: Distinguishes it from square project cards
+                     4. text-teal-300: High contrast, easy to read
+                  */
+                  className="bg-teal-500/10 border border-teal-500/20 text-white px-5 py-2.5 rounded-full text-sm font-medium tracking-wide hover:bg-teal-500/20 hover:border-teal-400 hover:text-teal-100 transition-all cursor-default"
                 >
                   {service}
                 </motion.li>
@@ -150,14 +179,22 @@ const About = () => {
             <h3 className="text-sm uppercase tracking-widest text-gray-500 mb-4">
               Skills
             </h3>
-            <ul className="flex flex-wrap gap-4 text-gray-500 font-medium text-base">
+
+            {/* Changed gap to gap-2 for better packing of small pills */}
+            <ul className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
                 <motion.li
                   key={skill}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  /* THE LOGIC: 
+         1. cursor-default: Keeps the mouse as an arrow (signals "not clickable")
+         2. hover:border-white/40: Just brightens the border slightly (signals "I see you")
+         3. No text color change: Keeps it looking like data, not a button
+      */
+                  className="border border-white/10 text-neutral-400 px-3 py-1 rounded-full text-sm hover:border-white/40 hover:text-neutral-200 transition-colors cursor-default"
                 >
                   {skill}
                 </motion.li>
@@ -169,7 +206,7 @@ const About = () => {
             <h3 className="text-sm uppercase tracking-widest text-gray-500 mb-4">
               Signals & Noise
             </h3>
-            <Signals />
+            {/* <Signals /> */}
           </div>
         </div>
       </div>

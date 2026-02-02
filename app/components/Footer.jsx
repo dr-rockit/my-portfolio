@@ -4,7 +4,7 @@ import { RiInstagramLine, RiFacebookBoxLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <footer className="footer p-4 relative max-h-[400px] w-full flex items-center justify-center">
+    <footer className="footer p-4 relative max-h-100 w-full flex items-center justify-center">
       <div className="flex flex-col items-center justify-center w-full h-auto">
         <MadeWithLove />
         <p className="text-xs text-gray-800 dark:text-gray-400 font-light">

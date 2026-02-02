@@ -4,8 +4,13 @@ const MadeWithLove = () => {
     <div className="flex items-center justify-center gap-1 mt-8 text-sm">
       Made with
       <Image src={"/images/heart.svg"} width={16} height={16} alt="heart" />
-      <span className="text-base my-2">+</span>
-      <Image src={"/images/skull.svg"} width={16} height={16} alt="skull" />
+      <Image
+        src={"/images/robot.svg"}
+        width={16}
+        height={16}
+        alt="robot"
+        className="mb-1"
+      />
     </div>
   );
 };
