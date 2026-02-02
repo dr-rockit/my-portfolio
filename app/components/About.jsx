@@ -1,7 +1,6 @@
 "use client";
 import React, { useMemo } from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
 import Signals from "./Signals";
 
 const About = () => {
@@ -48,17 +47,6 @@ const About = () => {
       id="information"
       className="relative text-white flex flex-col-reverse lg:flex-row items-stretch justify-center px-8 gap-8 mb-16"
     >
-      {/* <div className="absolute inset-0 z-0 hidden dark:block h-full w-full mx-auto overflow-hidden">
-        <Image
-          src="/images/skull.jpg"
-          alt="Background"
-          fill
-          priority
-          quality={50}
-          className="object-cover lg:object-contain object-left opacity-20"
-        />
-      </div> */}
-
       <div className="relative z-10 flex flex-col-reverse lg:flex-row items-stretch justify-center w-full gap-8">
         <div className="flex flex-col justify-end self-stretch w-full lg:w-1/2">
           {/* Top content (optional image/logo placeholder) */}
@@ -206,7 +194,7 @@ const About = () => {
             <h3 className="text-sm uppercase tracking-widest text-gray-500 mb-4">
               Signals & Noise
             </h3>
-            {/* <Signals /> */}
+            <Signals />
           </div>
         </div>
       </div>
