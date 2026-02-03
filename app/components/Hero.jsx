@@ -179,7 +179,9 @@ export default function HeroSection() {
                   </p>
                 </div>
                 <div
-                  className={`tooltip ${isLimitReached ? "tooltip-error" : ""}`}
+                  className={`tooltip tooltip-left md:tooltip-top ${
+                    isLimitReached ? "tooltip-error" : ""
+                  }`}
                   data-tip={tooltipText}
                 >
                   <motion.button
