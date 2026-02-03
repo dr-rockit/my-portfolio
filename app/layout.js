@@ -26,9 +26,9 @@ const workStatus = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} antialiased`}>
+      <body className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} antialiased bg-base-100 text-base-content`}>
         <WorkButton /> {/* Sits on top of everything */}
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark">
+        <ThemeProvider attribute={["class", "data-theme"]} defaultTheme="dark" enableSystem={false} forcedTheme="dark">
           {children}
         </ThemeProvider>
       </body>
