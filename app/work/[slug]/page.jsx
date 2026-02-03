@@ -8,6 +8,7 @@ const projects = [
   {
     slug: "freedom2hear",
     title: "Freedom2Hear",
+    url: "https://www.freedom2hear.com",
     tagline: "High-Fidelity Presentation Design & Visual Assets",
     tech: ["Illustrator", "Photoshop"],
     challenge:
@@ -66,6 +67,7 @@ const projects = [
   {
     slug: "attic-cellar",
     title: "The Attic Cellar Treatment Rooms",
+    url: "https://www.theatticcellar.com",
     tagline: "Inviting Beauty and Holistic Health Site",
     tech: [
       "Illustrator",

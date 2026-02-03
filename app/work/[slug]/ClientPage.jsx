@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { HiArrowUp } from "react-icons/hi";
+import { HiArrowUp, HiOutlineGlobe } from "react-icons/hi";
 
 export default function ClientPage({ project, nextProject }) {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -79,6 +79,36 @@ export default function ClientPage({ project, nextProject }) {
                 </div>
               ))}
             </div>
+
+            {project.url && (
+              <div className="mt-8">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium tracking-wide text-white/40 transition-colors hover:text-primary hover:underline underline-offset-4"
+                >
+                  <div className="tooltip" data-tip={project.url}>
+                    <HiOutlineGlobe className="w-5 h-5" />
+                  </div>
+                  VISIT LIVE SITE{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>
