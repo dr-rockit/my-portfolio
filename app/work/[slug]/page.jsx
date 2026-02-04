@@ -96,6 +96,12 @@ const projects = [
         title: "Visual Treatment Menu",
         text: "Individual practitioner pages feature a responsive masonry layout that clearly presents treatments and pricing. This clean organization helps clients easily explore the specific holistic services available from each therapist.",
       },
+      {
+        image: "/images/actr/actr-4.jpg",
+        sectionTitle: "Mobile Optimization",
+        title: "Seamless on Small Screens",
+        text: "The site was built with a mobile-first approach, ensuring that the rich visual content and masonry layouts translate perfectly to handheld devices. This responsiveness guarantees that clients have the same seamless experience whether they are booking from a desktop or their phone.",
+      },
     ],
   },
   {

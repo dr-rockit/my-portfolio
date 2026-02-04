@@ -82,23 +82,22 @@ export default function ClientPage({ project, nextProject }) {
 
             {project.url && (
               <div className="mt-8">
+                {" "}
+                {/* Reduced margin from 16 to 8 for better grouping */}
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium tracking-wide text-white/40 transition-colors hover:text-primary hover:underline underline-offset-4"
+                  className="btn btn-outline btn-sm rounded-md text-xs font-normal normal-case text-white/40 border-white/20 hover:bg-white/90 hover:text-black hover:border-white/50 transition-all"
                 >
-                  <div className="tooltip" data-tip={project.url}>
-                    <HiOutlineGlobe className="w-5 h-5" />
-                  </div>
-                  VISIT LIVE SITE{" "}
+                  Visit Live Site
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    strokeWidth={2}
+                    strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-4 h-4"
+                    className="w-3.5 h-3.5" /* Slightly adjusted icon size to match text-xs */
                   >
                     <path
                       strokeLinecap="round"

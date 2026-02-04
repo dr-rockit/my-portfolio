@@ -68,16 +68,16 @@ const projects = [
   },
   {
     id: 2,
-    title: "RenewableUK",
-    type: "UI/UX Design",
-    image: "/images/project-16.jpg",
+    title: "Attic Cellar Treatment Rooms",
+    type: "Website/Social Media/Print",
+    image: "/images/project-1.jpg",
+    slug: "attic-cellar",
   },
   {
     id: 3,
-    title: "Freedom2Hear",
-    type: "Deck Design & Visuals",
-    image: "/images/project-14.jpg",
-    slug: "freedom2hear",
+    title: "Into the Garden Room",
+    type: "Logo Design/Print",
+    image: "/images/project-6.jpg",
   },
   {
     id: 4,
@@ -94,9 +94,10 @@ const projects = [
   },
   {
     id: 6,
-    title: "Into the Garden Room",
-    type: "Logo Design/Print",
-    image: "/images/project-6.jpg",
+    title: "Freedom2Hear",
+    type: "Deck Design & Visuals",
+    image: "/images/project-14.jpg",
+    slug: "freedom2hear",
   },
   {
     id: 7,
@@ -118,11 +119,10 @@ const projects = [
     image: "/images/project-9.jpg",
   },
   {
-    id: 10,
-    title: "Attic Cellar Treatment Rooms",
-    type: "Website/Social Media/Print",
-    image: "/images/project-1.jpg",
-    slug: "attic-cellar",
+    id: 2,
+    title: "RenewableUK",
+    type: "UI/UX Design",
+    image: "/images/project-16.jpg",
   },
   {
     id: 11,
