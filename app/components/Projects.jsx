@@ -119,7 +119,7 @@ const projects = [
     image: "/images/project-9.jpg",
   },
   {
-    id: 2,
+    id: 10,
     title: "RenewableUK",
     type: "UI/UX Design",
     image: "/images/project-16.jpg",
