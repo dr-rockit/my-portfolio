@@ -154,6 +154,23 @@ const projects = [
     processText:
       "This detailed view of the filter page enables users to find their ideal home by refining results based on bedrooms, floor level, aspect, and price range.",
   },
+  {
+    slug: "lazenby-square",
+    title: "Lazenby Square",
+    tagline: "Mobile Property Sales App",
+    tech: ["Illustrator", "Sketch"],
+    challenge:
+      "Commissioned by Peabody for their Lazenby Square development, the goal was to create a dedicated mobile application for their sales team and prospective buyers. The challenge was to condense complex inventory data and detailed architectural floor plans into a seamless handheld experience. The interface needed to be intuitive on a smaller screen while maintaining the elegance and high architectural standards of the physical development.",
+    solution:
+      "I delivered a high-fidelity mobile UI tailored specifically for iOS and Android devices. The design prioritizes thumb-friendly navigation, allowing users to effortlessly filter apartments, view interactive floor plans, and access property specs on the go. The visual language utilizes a refined dark mode and clean typography to maximize screen real estate, creating a sophisticated, pocket-sized sales tool that enhances the buyer's journey.",
+    year: "2022",
+    image: "/images/lazenby-square/lazenby-square-1.jpg",
+    processImage: "/images/lazenby-square/lazenby-square-2.jpg",
+    processSectionTitle: "Smart Inventory Filtering",
+    processTitle: "INTUITIVE CONTROLS",
+    processText:
+      "To manage the extensive inventory, I developed a streamlined filtering system. Users can isolate units based on block, bedroom count, and price range using tactile sliders. The interface also introduces a 'Favourites' feature, allowing buyers to curate a personal list of potential homes for future reference.",
+  },
 ];
 
 // 2. STATIC PARAMS

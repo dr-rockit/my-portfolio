@@ -91,6 +91,7 @@ const projects = [
     title: "Lazenby Square",
     type: "Mobile App UI/UX",
     image: "/images/project-5.jpg",
+    slug: "lazenby-square",
   },
   {
     id: 6,
