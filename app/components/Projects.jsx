@@ -116,7 +116,7 @@ const projects = [
     {
     id: 9,
     title: "Lampton Parkside",
-    type: "large format App UI/UX",
+    type: "Immersive Real Estate Sales Suite",
     image: "/images/project-3.jpg",
     slug: "lampton-parkside",
   },
