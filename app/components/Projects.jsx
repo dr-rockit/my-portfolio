@@ -113,11 +113,12 @@ const projects = [
     image: "/images/project-15.jpg",
     slug: "higgs-yard",
   },
-  {
+    {
     id: 9,
-    title: "Latimer - Property Search",
-    type: "UI/UX Design",
-    image: "/images/project-9.jpg",
+    title: "Lampton Parkside",
+    type: "large format App UI/UX",
+    image: "/images/project-3.jpg",
+    slug: "lampton-parkside",
   },
   {
     id: 10,
@@ -139,9 +140,9 @@ const projects = [
   },
   {
     id: 13,
-    title: "Gratitood",
-    type: "Mobile App/Website",
-    image: "/images/project-3.jpg",
+    title: "Latimer - Property Search",
+    type: "UI/UX Design",
+    image: "/images/project-9.jpg",
   },
   {
     id: 14,

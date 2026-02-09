@@ -154,6 +154,44 @@ const projects = [
     processText:
       "This detailed view of the filter page enables users to find their ideal home by refining results based on bedrooms, floor level, aspect, and price range.",
   },
+    {
+    slug: "lampton-parkside",
+    title: "Lampton Parkside",
+    tagline: "Interactive Property Sales App",
+    tech: ["Illustrator", "Sketch"],
+    challenge:
+      "Notting Hill Genesis required a high-fidelity digital sales tool for the Lampton Parkside marketing suite. The objective was to translate complex architectural data and availability lists into an intuitive experience. The interface needed to allow sales agents and potential buyers to explore the development, visualize unbuilt apartments, and understand the lifestyle offering on a large-format touchscreen.",
+    solution:
+      "I designed and developed a bespoke interactive application that serves as the centerpiece of the sales journey. The solution features a rotatable 3D site model, a powerful apartment finder, and detailed floor plan visualization. The UI was crafted to be elegant and unobtrusive, ensuring the high-quality CGI assets and architectural details remain the focal point while providing a seamless user experience.",
+    year: "2022",
+    image: "/images/lampton-parkside/lampton-parkside-1.jpg",
+    processSections: [
+      {
+        image: "/images/lampton-parkside/lampton-parkside-2.jpg",
+        sectionTitle: "Filter Search & Availability",
+        title: "Intuitive Controls",
+        text: "To streamline the sales process, I implemented a robust filtering engine. Users can refine their search by specific criteria—such as price range, number of bedrooms, and floor level. The results populate a data table in real-time, allowing for quick comparison of unit specifications and immediate access to availability status.",
+      },
+      {
+        image: "/images/lampton-parkside/lampton-parkside-3.jpg",
+        sectionTitle: "Interactive Floor Plans",
+        title: "Detailed Visualization",
+        text: "Each unit features a dedicated interactive floor plan view. This high-detail interface allows users to inspect the layout, room dimensions, and orientation of the specific apartment. The clean UI ensures technical information is presented clearly without overwhelming the user, helping them visualize the flow of their potential new home.",
+      },
+            {
+        image: "/images/lampton-parkside/lampton-parkside-6.jpg",
+        sectionTitle: "Immersive Gallery Experience",
+        title: "Visual Storytelling",
+        text: "Emotional connection is key to off-plan sales. The gallery section utilizes a full-screen layout to showcase high-resolution CGI renders of the exterior architecture and interior finishes. This immersive view helps prospective buyers visualize the atmosphere and quality of the finished development",
+      },
+            {
+        image: "/images/lampton-parkside/lampton-parkside-4.jpg",
+        sectionTitle: "Amenities & Local Area",
+        title: "Contextual Location Mapping",
+        text: "Location context is vital. I integrated an interactive area map that highlights the development’s connectivity. Users can explore the proximity to local transport links, green spaces, schools, and shopping districts, effectively demonstrating the lifestyle benefits of the Lampton Parkside location.",
+      },
+    ],
+  },
   {
     slug: "lazenby-square",
     title: "Lazenby Square",
