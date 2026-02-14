@@ -1,18 +1,24 @@
-import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
+import { Instrument_Serif, Manrope } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import WorkButton from "./components/WorkButton";
 import { Analytics } from "@vercel/analytics/next"
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-});
+// Configure the Serif font (Editorial feel)
+const instrumentSerif = Instrument_Serif({
+  weight: ['400'], // It comes in 400 (regular) and italics automatically
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-serif', // We will use this variable in Tailwind
+  display: 'swap',
+})
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
-  subsets: ["latin"],
-});
+// Configure the Sans font (UI/Clean feel)
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 export const metadata = {
   title: "ian_j.fears",
@@ -27,7 +33,7 @@ const workStatus = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} antialiased bg-base-100 text-base-content`}>
+      <body className={`${manrope.variable} ${instrumentSerif.variable} antialiased bg-base-100 text-base-content`}>
         <WorkButton /> {/* Sits on top of everything */}
         <ThemeProvider attribute={["class", "data-theme"]} defaultTheme="dark" enableSystem={false} forcedTheme="dark">
           {children}

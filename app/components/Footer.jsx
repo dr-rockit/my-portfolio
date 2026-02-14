@@ -1,38 +1,104 @@
 import React from "react";
 import MadeWithLove from "../components/MadeWithLove";
-import { RiInstagramLine, RiFacebookBoxLine } from "react-icons/ri";
+import SiteCredits from "../components/SiteCredits";
+import { RiInstagramLine, RiFacebookBoxLine, RiArrowRightUpLine } from "react-icons/ri";
 
 const Footer = () => {
-  return (
-    <footer className="footer p-4 relative max-h-100 w-full flex items-center justify-center">
-      <div className="flex flex-col items-center justify-center w-full h-auto">
-        <MadeWithLove />
-        <p className="text-xs text-gray-800 dark:text-gray-400 font-light">
-          Designing and building beautiful spaces since 1997
-        </p>
-        <p className="text-xs text-gray-800 dark:text-gray-400 font-light">
-          Copyright © {new Date().getFullYear()} - All right reserved
-        </p>
+  const currentYear = new Date().getFullYear();
 
-        <nav>
-          <div className="grid grid-flow-col gap-8 m-2">
-            <a
-              href="https://www.instagram.com/drrockit/?hl=en"
-              target="_blank"
-              className="text-gray-600 hover:text-teal-600 transition-colors duration-300 ease-in-out"
-            >
-              <RiInstagramLine size={24} />
-            </a>
-            <a
-              href="https://www.facebook.com/ifears"
-              target="_blank"
-              className="text-gray-600 hover:text-teal-600 transition-colors duration-300 ease-in-out"
-            >
-              <RiFacebookBoxLine size={24} />
-            </a>
+  // THE RADIOHEAD LOGIC:
+  // We break the name into an array including the symbols (/, _) to treat them as equal visual characters.
+  const watermarkChars = ['I', '_', 'A', 'N', '/', 'J', '_', 'F', 'E', 'A', '_', 'R', 'S'];
+
+  return (
+    <footer className="bg-neutral text-neutral-content relative overflow-hidden pt-20 pb-0 px-4 md:px-8">
+      
+      {/* 1. THE BIG "CALL TO ACTION" */}
+      <div className="max-w-7xl mx-auto mb-20 border-b border-white/10 pb-20 relative z-10">
+        <h2 className="font-serif text-[12vw] leading-[0.8] mb-8 text-white">
+          Have an idea?
+        </h2>
+        
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+          <div className="max-w-xl">
+            <p className="text-xl md:text-2xl text-gray-400 font-light font-sans">
+              I'm currently available for new projects. Let's build something 
+              <span className="font-serif italic text-white mx-2">beautiful</span> 
+              together.
+            </p>
           </div>
-        </nav>
+          
+          <a 
+            href="mailto:ianjfears@gmail.com" 
+            className="group flex items-center gap-3 text-2xl md:text-3xl font-serif text-white hover:text-teal-400 transition-colors"
+          >
+            ianjfears@gmail.com
+            <RiArrowRightUpLine className="group-hover:rotate-45 transition-transform duration-300" />
+          </a>
+        </div>
       </div>
+
+
+      {/* 2. THE DATA GRID */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-32 text-sm tracking-wide relative z-10">
+        
+        {/* Established */}
+        <div className="md:col-span-4 space-y-4">
+           <p className="font-mono text-xs uppercase text-gray-500 mb-2">Established</p>
+           <p className="text-gray-400 max-w-xs leading-relaxed">
+             Designing and building beautiful spaces since 1997. 
+             Based in Cornwall, working globally.
+           </p>
+<div className="pt-6 opacity-80 hover:opacity-100 transition-opacity">
+             <SiteCredits />
+           </div>
+        </div>
+
+        {/* Connect */}
+        <div className="md:col-span-4 space-y-4">
+           <p className="font-mono text-xs uppercase text-gray-500 mb-2">Connect</p>
+           <div className="flex flex-col gap-3">
+              <a href="https://www.instagram.com/drrockit/?hl=en" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:text-teal-400 transition-colors w-max group">
+                <RiInstagramLine size={18} className="text-gray-400 group-hover:text-teal-400" />
+                <span className="font-serif italic text-lg">Instagram</span>
+              </a>
+              <a href="https://www.facebook.com/ifears" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:text-teal-400 transition-colors w-max group">
+                <RiFacebookBoxLine size={18} className="text-gray-400 group-hover:text-teal-400" />
+                <span className="font-serif italic text-lg">Facebook</span>
+              </a>
+           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="md:col-span-4 md:text-right flex flex-col justify-between">
+           <div>
+             <p className="font-mono text-xs uppercase text-gray-500 mb-2">Copyright</p>
+             <p className="text-gray-500">© {currentYear} Ian Fears.</p>
+             <p className="text-gray-600">All rights reserved.</p>
+           </div>
+        </div>
+      </div>
+
+
+      {/* 3. THE RADIOHEAD "IN RAINBOWS" WATERMARK 
+          - Logic: Flexbox with 'justify-between' forces the letters to spread edge-to-edge.
+          - Style: Bold Sans-Serif to match the album typography.
+          - Symbols: Underscores and Slashes act as spacers.
+      */}
+      <div className="w-full flex justify-between items-end overflow-hidden -mb-4 md:-mb-10 px-2 select-none pointer-events-none opacity-[0.04]">
+        {watermarkChars.map((char, index) => (
+          <span 
+            key={index} 
+            className={`
+               font-sans font-bold text-[13vw] leading-none 
+               ${char === '/' || char === '_' ? 'text-white' : 'text-white'}
+            `}
+          >
+            {char}
+          </span>
+        ))}
+      </div>
+
     </footer>
   );
 };

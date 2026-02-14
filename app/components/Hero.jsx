@@ -88,12 +88,12 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           className="w-full pointer-events-auto"
         >
-          <h1 className="text-[12vw] leading-[0.8] font-black mb-8 tracking-tighter">
+          <h1 className="text-[12vw] leading-[0.8] font-serif italic mb-8 tracking-tight">
             Digital Designer & Developer
           </h1>
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl mb-8 opacity-80">
-              I build high-performance web experiences for{" "}
+              I <span className="font-serif italic text-white">curate</span> digital experiences for{" "}
               <span className="relative inline-block group">
                 <a
                   href="#information"

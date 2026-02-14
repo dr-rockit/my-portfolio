@@ -1,15 +1,17 @@
 export default function GeometricBackground() {
   return (
-    <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none -z-10">
+    // Make sure the PARENT of this component has 'relative' or 'absolute' position!
+    <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-0">
+      
       {/* 1. THE RIBBED CIRCLE */}
       <svg
-        className="absolute top-1/2 left-1/2 -translate-y-1/2 w-[40%] h-auto text-gray-600 opacity-30"
+        className="absolute top-1/4 left-1/2 -translate-y-1/2 w-[40%] h-auto text-gray-600 opacity-20"
         style={{ shapeRendering: "geometricPrecision" }}
         viewBox="0 0 972 972"
         fill="currentColor"
+        aria-hidden="true" // Added for accessibility
       >
         <g>
-          {/* Removed hardcoded fill="#757575" so it uses the Tailwind class above */}
           <path d="M609.6673,15.7717l345.2788,598.1195c4.6713-17.1641,8.4453-34.6972,11.2269-52.5614L660.7659,32.2794c-16.6135-6.4062-33.6622-11.9324-51.0986-16.5076Z" />
           <path d="M967.4697,419.5572l-183.2275-317.4011c-20.9719-16.3254-43.305-30.9837-66.821-43.7433l254.3967,440.686c.1163-4.3741.1822-8.7608.1822-13.1629,0-22.5204-1.5661-44.672-4.5303-66.3786Z" />
           <path d="M435.7005,2.4506l443.7882,768.7655c7.8585-10.8234,15.306-21.9642,22.2679-33.4354L475.855,0c-13.5265.2772-26.9211,1.0897-40.1545,2.4506Z" />
@@ -18,22 +20,26 @@ export default function GeometricBackground() {
         </g>
       </svg>
 
-      {/* 2. The 'X' Markers */}
-      <svg
-        className="absolute bottom-0 left-1/4 -translate-x-1/2 w-[40%] h-auto text-gray-700 opacity-40"
-        viewBox="0 0 450 450"
-        fill="currentColor"
+      {/* 2. THE X MARK */}
+      <div 
+        className="absolute bottom-4 left-1/4 -translate-x-1/2 w-[40%] aspect-square text-gray-700 opacity-40"
+        aria-hidden="true" // Added for accessibility
       >
-        <polygon
-          points="0 450 159.2005 450 159.2005 391.5281 151.3108 399.3981 133.5838 381.7154 159.2005 356.1627 159.2005 336.5396 133.5838 310.9869 151.3108 293.3041 159.2005 301.1741 159.2005 281.2069 0 281.2069 0 450"
-          // FIX: Changed fill-rule to fillRule and removed hardcoded color
-          fillRule="evenodd"
-        />
-        <path
-          d="M0,0v274.9553h450V0H0ZM239.9432,214.1726l-17.727,17.6827-35.4527-35.3642-35.4527,35.3642-17.727-17.6827,35.4527-35.3642-35.4527-35.3642,17.727-17.6827,35.4527,35.3642,35.4527-35.3642,17.727,17.6827-35.4527,35.3642,35.4527,35.3642ZM427.9601,214.1726l-17.727,17.6827-35.4527-35.3642-35.4527,35.3642-17.727-17.6827,35.4527-35.3642-35.4527-35.3642,17.727-17.6827,35.4527,35.3642,35.4527-35.3642,17.727,17.6827-35.4527,35.3642,35.4527,35.3642Z"
-          fillRule="evenodd"
-        />
-      </svg>
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 450 450"
+          fill="currentColor"
+        >
+          <polygon
+            points="0 450 159.2005 450 159.2005 391.5281 151.3108 399.3981 133.5838 381.7154 159.2005 356.1627 159.2005 336.5396 133.5838 310.9869 151.3108 293.3041 159.2005 301.1741 159.2005 281.2069 0 281.2069 0 450"
+            fillRule="evenodd"
+          />
+          <path
+            d="M0,0v274.9553h450V0H0ZM239.9432,214.1726l-17.727,17.6827-35.4527-35.3642-35.4527,35.3642-17.727-17.6827,35.4527-35.3642-35.4527-35.3642,17.727-17.6827,35.4527,35.3642,35.4527-35.3642,17.727,17.6827-35.4527,35.3642,35.4527,35.3642ZM427.9601,214.1726l-17.727,17.6827-35.4527-35.3642-35.4527,35.3642-17.727-17.6827,35.4527-35.3642-35.4527-35.3642,17.727-17.6827,35.4527,35.3642,35.4527-35.3642,17.727,17.6827-35.4527,35.3642,35.4527,35.3642Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
     </div>
   );
 }
