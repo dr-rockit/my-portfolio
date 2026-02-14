@@ -17,18 +17,18 @@ const projects = [
       "Bypassing standard templates, I designed the core visual narrative in Adobe Illustrator to ensure pixel-perfect typography and composition. The final assets were exported as high-resolution backdrops into a master slide system, giving the client a 'locked' visual foundation that maintains brand integrity while allowing for text edits.",
     year: "2026",
     image: "/images/F2H-UA/F2H-UA-1.jpg",
-    processImage: "/images/F2H-UA/process.jpg",
+    processImage: "/images/F2H-UA/F2H-UA-7.jpg",
     processTitle: "The Build",
     processText:
       "Constructing the grid system in vector format (Illustrator) prior to export. This ensures pixel-perfect alignment and allows for complex masking techniques that remain editable in the master template.",
     moreImagesTitle: "More from the Deck",
     images: [
-      "/images/F2H-UA/F2H-UA-1.jpg",
       "/images/F2H-UA/F2H-UA-2.jpg",
       "/images/F2H-UA/F2H-UA-3.jpg",
       "/images/F2H-UA/F2H-UA-4.jpg",
       "/images/F2H-UA/F2H-UA-5.jpg",
       "/images/F2H-UA/F2H-UA-6.jpg",
+      "/images/F2H-UA/F2H-UA-8.jpg",  
     ],
   },
   {
@@ -47,18 +47,14 @@ const projects = [
     solution:
       "I developed a dynamic visual language designed to resonate with creative agencies and data partners alike. This included a modern logo to anchor the brand and a suite of high-impact presentation decks for client acquisition. Crucially, I utilized motion graphics to translate raw data into fluid visual narratives. This allowed personalyze.ai to demonstrate their complex analytics in real-time at tech events, turning static figures into a compelling story that agencies could immediately understand.",
     year: "2024",
-    image: "/images/personalyze/personalyze-1.jpg",
-    processImage: "/images/personalyze/personalyze-5.jpg",
-    processSectionTitle: "Visualizing Audience Intelligence",
-    processTitle: "Concept: The Digital Mind",
-    processText:
-      "This visualization translates complex machine-learning processes into a clear, approachable narrative. By mapping the relationship between the central AI 'brain' and specific interest verticals, the design demonstrates how the platform turns chaotic behavioral data into structured, actionable audience segments.",
+    image: "/images/personalyze/personalyze-6.jpg",
     moreImagesTitle: "More from the Decks",
     images: [
       "/images/personalyze/personalyze-4.jpg",
       "/images/personalyze/personalyze-2.jpg",
-      "/images/personalyze/personalyze-8.jpg",
+      "/images/personalyze/personalyze-7.jpg",
       "/images/personalyze/personalyze-3.jpg",
+      "/images/personalyze/personalyze-5.jpg",
     ],
     videos: [
       "https://player.vimeo.com/video/1160177154?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0",
@@ -66,9 +62,9 @@ const projects = [
   },
   {
     slug: "attic-cellar",
-    title: "The Attic Cellar Treatment Rooms",
+    title: "Attic Cellar Treatment Rooms",
     url: "https://www.theatticcellar.com",
-    tagline: "Inviting Beauty and Holistic Health Site",
+    tagline: "Designing a Sanctuary for Beauty & Health",
     tech: [
       "Illustrator",
       "Photoshop",
@@ -144,9 +140,10 @@ const projects = [
     moreImagesTitle: "Interface Design",
     images: [
       "/images/higgs-yard/higgs-yard-2.jpg",
-      "/images/higgs-yard/higgs-yard-3.jpg",
       "/images/higgs-yard/higgs-yard-6.jpg",
+      "/images/higgs-yard/higgs-yard-3.jpg",
       "/images/higgs-yard/higgs-yard-5.jpg",
+      "/images/higgs-yard/higgs-yard-7.jpg",
     ],
     processImage: "/images/higgs-yard/higgs-yard-4.jpg",
     processSectionTitle: "Apartment Finder",
@@ -212,7 +209,7 @@ const projects = [
 ];
 
 // 2. STATIC PARAMS
-// This tells Next.js which pages to build (e.g., /work/fintech-dashboard)
+// This tells Next.js which pages to build (e.g., /work/freedom2hear, /work/personalyze-ai, etc.)
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,

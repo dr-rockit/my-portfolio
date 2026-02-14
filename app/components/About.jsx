@@ -79,7 +79,7 @@ const About = () => {
         <div className="lg:w-1/2 w-full space-y-8">
           <motion.p
             {...paragraphStyles}
-            className="text-xl lg:text-3xl font-medium leading-tight text-gray-900 dark:text-white"
+            className="text-xl lg:text-3xl font-serf italic leading-tight text-gray-900 dark:text-white"
           >
             I'm Ian — a digital designer, front-end developer, and visual
             storyteller with a love for clean design, smart interaction, and
@@ -88,9 +88,11 @@ const About = () => {
           <motion.p
             {...paragraphStyles}
             transition={{ ...paragraphStyles.transition, delay: 0.2 }}
-            className="space-y-6 text-base lg:text-lg leading-relaxed text-gray-600 dark:text-gray-400"
+            className="columns-1 md:columns-2 gap-12 space-y-6 text-lg leading-relaxed text-gray-400 font-sans"
           >
-            For over three decades, I've been crafting digital experiences that
+            <span className="float-left text-7xl font-serif text-white mr-3 -mt-1.5 leading-none">
+              F
+            </span>or over three decades, I've been crafting digital experiences that
             connect, inform, and surprise. Today, I combine that deep design
             intuition with the power of AI - using modern tools to prototype
             faster, optimize code, and push the boundaries of what's possible.

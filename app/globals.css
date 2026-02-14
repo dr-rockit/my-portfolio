@@ -96,3 +96,51 @@
     @apply bg-background text-foreground;
   }
 }
+
+@theme {
+  /* 1. Link the CSS variables from Next.js to Tailwind classes */
+  --font-serif: var(--font-serif); 
+  --font-sans: var(--font-sans);
+
+  /* 2. Add your custom grid height for the Bento layout */
+  --spacing-128: 32rem; /* Adds a generic h-128 class if needed */
+}
+
+/* Since DaisyUI is a plugin, in v4 you import it as a source 
+   OR if you are using the compatibility layer, you might still need 
+   a minimal config. 
+   
+   *Check:* If you are using Tailwind v4, DaisyUI 5 is required.
+   If you are on v3.4 (standard Next.js install), you still use tailwind.config.js.
+*/
+
+/* UTILITY CLASSES FOR THE BENTO GRID
+   (Paste these at the bottom of globals.css)
+*/
+
+@layer utilities {
+  .grid-bento {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mobile: 1 col */
+    grid-auto-flow: dense; /* Fills gaps */
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid-bento {
+      grid-template-columns: repeat(4, 1fr); /* Desktop: 4 cols */
+      grid-auto-rows: 300px; /* Force rows to be 300px tall */
+    }
+  }
+
+  /* Helper classes for spanning */
+  .span-wide { grid-column: span 1; }
+  .span-tall { grid-row: span 1; }
+  .span-big  { grid-column: span 1; grid-row: span 1; }
+
+  @media (min-width: 768px) {
+    .span-wide { grid-column: span 2; }
+    .span-tall { grid-row: span 2; }
+    .span-big  { grid-column: span 2; grid-row: span 2; }
+  }
+}
