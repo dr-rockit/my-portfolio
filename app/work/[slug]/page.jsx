@@ -206,6 +206,83 @@ const projects = [
     processText:
       "To manage the extensive inventory, I developed a streamlined filtering system. Users can isolate units based on block, bedroom count, and price range using tactile sliders. The interface also introduces a 'Favourites' feature, allowing buyers to curate a personal list of potential homes for future reference.",
   },
+    {
+    slug: "sarah-freer",
+    title: "Sarah Freer",
+    tagline: "Continuous Flow: A Digital Sanctuary for Holistic Healing",
+    tech: ["Illustrator", "Photoshop", "React", "Next.js", "TailwindCSS", "daisyUI"],
+    challenge:
+      "Sarah is a practitioner with over three decades of expertise, but her previous digital presence didn't reflect the premium, serene experience of her physical clinic. The primary hurdle was managing high information density—presenting over 15 distinct treatments—without causing \"choice paralysis\" for the visitor. I also needed to solve for atmospheric translation, finding a way to bridge the gap between a standard clinical website and the tranquil, hands-on reality of her practice at Tir Y Coed Country House in the heart of Snowdonia National Park.",
+
+    solution:
+      "I designed and built a bespoke, long-scroll experience titled \"Continuous Flow,\" intended to act as a digital extension of a physical treatment session. By utilizing a split-screen layout and a sticky accordion navigation, I guided the user through a rhythmic journey that prioritizes a digestible hierarchy over a cluttered interface. I intentionally divided the extensive treatment menu into two distinct sections to maintain a clean aesthetic and prevent scroll fatigue, while grounding the entire experience in the Conwy Valley landscape and action-oriented imagery. This culminated in a low-friction conversion path that replaces cold, clinical forms with a warm, high-contrast invitation to connect.",
+    year: "2025",
+    image: "/images/sarah-freer/sarah-freer-1.jpg",
+    processImage: "/images/sarah-freer/sarah-freer-2.jpg",
+    processSectionTitle: "Leaflet Design",
+    processTitle: "DL Leaflet for In-Person Distribution",
+    processText:
+      "To complement the digital experience, I designed a DL leaflet that distills the essence of the website into a tangible format. The layout mirrors the split-screen design of the site, with one side dedicated to evocative imagery and the other to concise, reassuring copy. This physical touchpoint serves as a bridge between the online sanctuary and the real-world clinic, allowing Sarah to connect with potential clients in person while maintaining brand consistency.",
+        longPage: {
+  title: "Continuous Flow",
+  slices: [
+    { 
+      image: "/images/sarah-freer/slice-1.jpg",
+      alt: "Close-up of the website hero section featuring elegant serif typography and a translucent navigation bar.",
+      label: "The Hook",
+      text: "I designed the hero section to establish an immediate sense of \"Zen\". By pairing minimalist navigation with ethereal imagery, I set the tone for a premium, holistic experience. My goal was to lower the user's heart rate the moment the page loads." 
+    },
+    { 
+      image: "/images/sarah-freer/slice-2.jpg",
+      alt: "A photograph of Sarah performing a foot treatment, demonstrating professional massage techniques and hands-on expertise.",
+      label: "About Sarah",
+      text: "Trust is the primary currency in massage therapy. Rather than a standard headshot, I chose to feature Sarah in action, immediately establishing her as a practitioner with \"hands-on\" authority. By placing this imagery alongside a summary of her 30 years of experience, I bridged the gap between professional clinical skill and the tangible, human care she provides." 
+    },
+    { 
+      image: "/images/sarah-freer/slice-3.jpg",
+      alt: "A landscape photograph of a lone tree in Snowdonia National Park, used to establish the clinic's tranquil geographical location.",
+      label: "The Location",
+      text: "Logistics meet aesthetics. I highlighted the clinic's setting in Rowen, nestled in the heart of Snowdonia National Park. By pairing landscape photography with clear arrival details for Tir Y Coed Country House, I wanted to show that the \"wind down\" begins before the client even walks through the door. The goal was to frame the quiet drive through the valley as the first step in the treatment process."
+    },
+        { 
+      image: "/images/sarah-freer/slice-4.jpg",
+      alt: "An interior view of the Garden Room treatment space showing a large window overlooking lush green gardens and nature.",
+      label: "The Garden Room",
+      text: "This section highlights the specific treatment space. I chose to emphasize the Garden Room's unique vantage point overlooking the grounds. By showcasing the connection to nature and the \"lovely garden\" views, I positioned the environment not just as a room, but as a key part of the healing process—a private sanctuary removed from the outside world." 
+    },
+    { 
+      image: "/images/sarah-freer/slice-5.jpg",
+      alt: "A section of the website titled 'Treatments Information' featuring clean typography and professional imagery of a treatment room.",
+      label: "Treatments Information",
+      text: "Before diving into specifics, I built this \"pre-flight\" section to manage expectations. I structured the copy to be reassuring and informative, ensuring the client feels safe and informed before they ever click \"Book.\"" 
+    },
+    { 
+      image: "/images/sarah-freer/slice-6.jpg", 
+      alt: "A card-based UI layout displaying different massage services with high-quality photography and concise descriptions.",
+      label: "Treatments",
+      text: "To avoid \"choice paralysis,\" I utilized a card-based layout. This first group of treatments uses evocative imagery and tight, descriptive copy, allowing users to browse services without feeling overwhelmed by technical jargon." 
+    },
+        { 
+      image: "/images/sarah-freer/slice-7.jpg",
+      alt: "A continuation of the treatment menu showing a consistent, rhythmic grid of holistic and remedial therapy cards.", 
+      label: "Treatments (Continued)",
+      text: "Consistency is key to the \"Continuous Flow\" theme. I maintained the visual rhythm for this second tier of services, ensuring that deeper remedial treatments receive the same high-end, editorial presentation as the signature sessions." 
+    },
+    { 
+      image: "/images/sarah-freer/slice-8.jpg",
+      alt: "The testimonials section of the website with a minimalist design, focusing on client feedback and white space.", 
+      label: "Testimonials",
+      text: "Social proof is essential for conversion. I designed the testimonial section with a minimalist layout that lets client voices breathe. By stripping away distracting UI elements, I kept the focus entirely on the emotional impact of Sarah's work." 
+    },
+        { 
+      image: "/images/sarah-freer/slice-9.jpg",
+      alt: "The contact and booking enquiry section featuring a high-contrast dark theme and a simple, user-friendly contact form.", 
+      label: "Contact & Enquiries",
+      text: "The final \"destination\" of the scroll. I replaced the standard, cold contact form with a warm invitation for booking enquiries. I kept the layout high-contrast and low-friction to convert a casual browser into a scheduled client." 
+    },
+  ]
+},
+  },
 ];
 
 // 2. STATIC PARAMS

@@ -1,5 +1,4 @@
 import React from "react";
-import MadeWithLove from "../components/MadeWithLove";
 import SiteCredits from "../components/SiteCredits";
 import { RiInstagramLine, RiFacebookBoxLine, RiArrowRightUpLine } from "react-icons/ri";
 

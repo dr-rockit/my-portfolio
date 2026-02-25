@@ -127,7 +127,7 @@ const projects = [
     title: "Sarah Freer",
     category: "WEB",
     image: "/images/project-2.jpg",
-    slug: null,
+    slug: "sarah-freer",
     year: "2025",
     // TALL: Portrait (1x2)
     span: "md:row-span-2", 
